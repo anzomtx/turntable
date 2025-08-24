@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const images = [
-  { src: "/images/view-1.png", hint: "product photography" },
-  { src: "/images/view-2.png", hint: "product photography" },
-  { src: "/images/view-3.png", hint: "product photography" },
-  { src: "/images/view-4.png", hint: "product photography" },
-  { src: "/images/view-5.png", hint: "product photography" },
-  { src: "/images/view-6.png", hint: "product photography" },
-  { src: "/images/view-7.png", hint: "product photography" },
-  { src: "/images/view-8.png", hint: "product photography" },
+  { src: "/images/20250822_152217 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152306 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152324 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152342 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152358 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152415 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152442 copy.jpg", hint: "product photography" },
+  { src: "/images/20250822_152516 copy.jpg", hint: "product photography" },
 ];
 
 export default function TurntableViewer() {
