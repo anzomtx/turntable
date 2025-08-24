@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const images = [
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
-  { src: "https://placehold.co/1024x768.png", hint: "product photography" },
+  { src: "/images/view-1.png", hint: "product photography" },
+  { src: "/images/view-2.png", hint: "product photography" },
+  { src: "/images/view-3.png", hint: "product photography" },
+  { src: "/images/view-4.png", hint: "product photography" },
+  { src: "/images/view-5.png", hint: "product photography" },
+  { src: "/images/view-6.png", hint: "product photography" },
+  { src: "/images/view-7.png", hint: "product photography" },
+  { src: "/images/view-8.png", hint: "product photography" },
 ];
 
 export default function TurntableViewer() {
