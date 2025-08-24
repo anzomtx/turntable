@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SpinView',
+  title: 'Planter Build',
   description: 'A simple turntable image viewer',
 };
 
