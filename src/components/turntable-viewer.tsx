@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const images = [
-  { src: "https://placehold.co/1200x800.png", hint: "product front" },
-  { src: "https://placehold.co/1200x800.png", hint: "product angle" },
-  { src: "https://placehold.co/1200x800.png", hint: "product side" },
-  { src: "https://placehold.co/1200x800.png", hint: "product back" },
-  { src: "https://placehold.co/1200x800.png", hint: "product detail" },
+  { src: "/images/turntable-1.png", hint: "product front" },
+  { src: "/images/turntable-2.png", hint: "product angle" },
+  { src: "/images/turntable-3.png", hint: "product side" },
+  { src: "/images/turntable-4.png", hint: "product back" },
+  { src: "/images/turntable-5.png", hint: "product detail" },
 ];
 
 export default function TurntableViewer() {
