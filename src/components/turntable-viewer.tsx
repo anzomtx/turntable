@@ -5,30 +5,24 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import type { ImageInfo } from "@/lib/image-sets";
 
-const images = [
-  { src: "/images/20250822_152217 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152306 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152324 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152342 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152358 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152415 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152442 copy.jpg", hint: "product photography" },
-  { src: "/images/20250822_152516 copy.jpg", hint: "product photography" },
-];
+interface TurntableViewerProps {
+  images: ImageInfo[];
+}
 
-export default function TurntableViewer() {
+export default function TurntableViewer({ images }: TurntableViewerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  }, []);
+  }, [images.length]);
 
   const prevImage = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
-  }, []);
+  }, [images.length]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -45,6 +39,18 @@ export default function TurntableViewer() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [nextImage, prevImage]);
+  
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [images]);
+
+  if (!images || images.length === 0) {
+    return (
+      <div className="relative w-full aspect-[3/2] overflow-hidden rounded-lg shadow-2xl bg-black flex items-center justify-center">
+        <p className="text-muted-foreground">No images to display.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full aspect-[3/2] overflow-hidden rounded-lg shadow-2xl bg-black">
