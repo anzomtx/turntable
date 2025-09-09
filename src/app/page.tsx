@@ -1,14 +1,14 @@
+"use client";
+
+import { useSearchParams } from 'next/navigation';
 import TurntableViewer from '@/components/turntable-viewer';
 import { imageSets, DEFAULT_SET } from '@/lib/image-sets';
 import type { ImageSet } from '@/lib/image-sets';
 
-export default function Home({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const setParam = searchParams?.set as keyof typeof imageSets;
-  const currentSet: ImageSet = imageSets[setParam] || imageSets[DEFAULT_SET];
+export default function Home() {
+  const searchParams = useSearchParams();
+  const setParam = searchParams.get('set') as keyof typeof imageSets | null;
+  const currentSet: ImageSet = (setParam && imageSets[setParam]) || imageSets[DEFAULT_SET];
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-center bg-background p-4 sm:p-8">
