@@ -38,4 +38,4 @@ export const imageSets: Record<string, ImageSet> = {
   },
 };
 
-export const DEFAULT_SET = "planter";
+export const DEFAULT_SET = "forklift";
