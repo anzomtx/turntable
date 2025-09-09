@@ -7,7 +7,7 @@ export default function Home({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const setParam = searchParams.set as keyof typeof imageSets;
+  const setParam = searchParams?.set as keyof typeof imageSets;
   const currentSet: ImageSet = imageSets[setParam] || imageSets[DEFAULT_SET];
 
   return (
