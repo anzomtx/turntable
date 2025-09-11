@@ -36,6 +36,20 @@ export const imageSets: Record<string, ImageSet> = {
       
     ],
   },
+  robotarm: {
+    title: "Robot Arm Build",
+    images: [
+      { src: "/images/robotarm/20250911_172920.jpg", hint: "robotarm 01" },
+      { src: "/images/robotarm/20250911_172935.jpg", hint: "robotarm 02" },
+      { src: "/images/robotarm/20250911_172946.jpg", hint: "robotarm 03" },
+      { src: "/images/robotarm/20250911_173000.jpg", hint: "robotarm 04" },
+      { src: "/images/robotarm/20250911_173008.jpg", hint: "robotarm 05" },
+      { src: "/images/robotarm/20250911_173019.jpg", hint: "robotarm 06" },
+      { src: "/images/robotarm/20250911_173030.jpg", hint: "robotarm 07" },
+      { src: "/images/robotarm/20250911_173041.jpg", hint: "robotarm 08" },
+      
+    ],
+  },
 };
 
 export const DEFAULT_SET = "planter";
