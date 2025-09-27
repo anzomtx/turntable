@@ -2,7 +2,10 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Planter Build',
+  title: {
+    template: '%s | Image Viewer',
+    default: 'Image Viewer',
+  },
   description: 'A simple turntable image viewer',
 };
 
